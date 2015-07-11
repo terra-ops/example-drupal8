@@ -22,9 +22,14 @@ class DefaultController extends ControllerBase {
    *   Return Hello string.
    */
   public function status() {
+
+    //Immutable Config (Read Only)
+    $config = \Drupal::config('terra.settings');
+    $path = 'path:' . $config->get('path_to_config');
+
     return [
       '#type' => 'markup',
-      '#markup' => $this->t('Hello Terra!')
+      '#markup' => $this->t('Hello Terra!') . $path
     ];
   }
 
