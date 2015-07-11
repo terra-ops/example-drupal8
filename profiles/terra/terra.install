@@ -22,8 +22,8 @@ function terra_install() {
   // those modules are already installed.
   \Drupal::service('entity.definition_update_manager')->applyUpdates();
 
-  // Set front page to "node".
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
+  // Set front page to "terra".
+  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/terra')->save(TRUE);
 
   // Allow visitor account creation with administrative approval.
   $user_settings = \Drupal::configFactory()->getEditable('user.settings');
