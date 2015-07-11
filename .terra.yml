@@ -4,3 +4,12 @@ docker_compose:
     app:
       volumes:
         - "~/.terra:/var/terra"
+
+hooks:
+  build: |
+    mkdir sites/default/files
+    chmod 777 sites/default/files
+    cp sites/default/default.services.yml sites/default/services.yml
+    cp sites/default/default.settings.php sites/default/settings.php
+    chmod 777 sites/default/settings.php
+    chmod 777 sites/default/services.yml
