@@ -4,7 +4,6 @@ description: 'Front-end for Terra'
 # version: VERSION
 # core: 8.x
 dependencies:
-  - node
   - history
   - block
   - breakpoint
@@ -37,6 +36,7 @@ dependencies:
   - views
   - views_ui
   - tour
+  - terra_server
 themes:
   - bartik
   - seven
