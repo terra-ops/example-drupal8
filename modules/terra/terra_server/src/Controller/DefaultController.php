@@ -10,6 +10,7 @@ namespace Drupal\terra_server\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\Yaml\Parser;
 use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Core\Url;
 
 /**
  * Class DefaultController.
@@ -58,9 +59,13 @@ class DefaultController extends ControllerBase {
         '#markup' => SafeMarkup::checkPlain($app['repo']),
       );
 
-      $environments = is_array($app['environments']) ? implode(', ', array_keys($app['environments'])) : 'None';
+      $environments = [];
+      foreach ($app['environments'] as $environment) {
+        $url = Url::fromUri($environment['url']);
+        $environments[] = $this->l($environment['name'], $url);
+      }
       $output['apps'][$name]['environments'] = array(
-        '#markup' => SafeMarkup::checkPlain($environments),
+        '#markup' => SafeMarkup::format(is_array($environments) ? implode(', ', $environments) : 'None'),
       );
 
     }
