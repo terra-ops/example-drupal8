@@ -28,6 +28,8 @@ Once you have the [terra app installed](https://github.com/terra-ops/terra-app/b
 8. Fill out the "Configure Site" page with any information you want.
 8. Done! You should now have a fully working drupal 8 site that shows the list of apps terra is tracking!
 
+![Terra Server UI](docs/terra-server-installed.png)
+
 How This Works
 ==============
 
