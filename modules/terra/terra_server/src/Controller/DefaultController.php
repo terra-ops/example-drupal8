@@ -61,6 +61,10 @@ class DefaultController extends ControllerBase {
 
       $environments = [];
       foreach ($app['environments'] as $environment) {
+        // Make sure the URL exists before trying to format it.
+        if (empty($environment['url'])) {
+          continue;
+        }
         $url = Url::fromUri($environment['url']);
         $environments[] = $this->l($environment['name'], $url);
       }
