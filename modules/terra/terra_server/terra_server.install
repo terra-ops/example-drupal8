@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_uninstall()
+ *
+ * Wow. Can't turn off the module without this.
+ */
+function terra_server_uninstall() {
+}
