@@ -25,4 +25,5 @@ Once you have the [terra app installed](https://github.com/terra-ops/terra-app/b
 5. Click through the Drupal installer, selecting "Terra Server" as your install profile.
 6. Use the "drupal" for the database name, user, and password.  Use "database" for the database host.
 7. Click "submit" and it will run the installer.
+8. Fill out the "Configure Site" page with any information you want.
 8. Done! You should now have a fully working drupal 8 site that shows the list of apps terra is tracking!
