@@ -1,0 +1,6 @@
+
+docker_compose:
+  overrides:
+    app:
+      volumes:
+        - "~/.terra:/var/terra"
