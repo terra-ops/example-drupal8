@@ -29,6 +29,10 @@ class DefaultController extends ControllerBase {
     $config = \Drupal::config('terra.settings');
     $path = $config->get('path_to_config');
 
+    if (!file_exists($path)) {
+       drupal_set_message('Terra config file does not exist at ' . $path . '!', 'error');
+    }
+
     $yaml = new Parser();
     $terra_config = $yaml->parse(file_get_contents($path));
 
