@@ -1,0 +1,5 @@
+terra.status:
+  title: 'Terra'
+  description: 'View terra status'
+  route_name: terra.status
+  menu_name: main

@@ -1,0 +1,6 @@
+name: Terra Server
+type: module
+description: Main Terra Server module.
+core: 8.x
+package: Terra
+

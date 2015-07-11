@@ -1,0 +1,14 @@
+{
+  "name": "drupal/terra_server",
+  "type": "drupal-module",
+  "description": "Main Terra Server module.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "http://drupal.org/project/terra_server",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/terra_server",
+    "source": "http://cgit.drupalcode.org/terra_server"
+  },
+  "require": { }
+}

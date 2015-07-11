@@ -1,0 +1,9 @@
+
+terra.status:
+  path: '/terra'
+  defaults:
+    _controller: '\Drupal\terra_server\Controller\DefaultController::status'
+    _title: 'Terra Server Status'
+  requirements:
+    _permission: 'access content'
+

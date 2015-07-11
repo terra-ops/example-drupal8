@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains terra_server.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function terra_server_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the terra_server module.
+    case 'help.page.terra_server':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Main Terra Server module.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function terra_server_theme() {
+  $theme = [];
+
+  return $theme;
+}
